@@ -32,7 +32,7 @@ var getLongname = function(name, attrs, owner = 'nobody', group = 'nogroup') {
 		longname += 'd';
 	}
 
-	let permissions = attrs.permissions.toString().split('');
+	let permissions = attrs.permissions.toString(8).split('');
 	permissions.forEach((el) => {
 		el == 1 ? longname += '--x' : null;
 		el == 2 ? longname += '-w-' : null;
